@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		945DAF252866842900C513DC /* BattleGroundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF242866842900C513DC /* BattleGroundApp.swift */; };
+		945DAF272866842900C513DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF262866842900C513DC /* ContentView.swift */; };
+		945DAF292866842B00C513DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 945DAF282866842B00C513DC /* Assets.xcassets */; };
+		945DAF2C2866842B00C513DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 945DAF2B2866842B00C513DC /* Preview Assets.xcassets */; };
+		945DAF362866842C00C513DC /* BattleGroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF352866842C00C513DC /* BattleGroundTests.swift */; };
+		945DAF402866842C00C513DC /* BattleGroundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF3F2866842C00C513DC /* BattleGroundUITests.swift */; };
+		945DAF422866842C00C513DC /* BattleGroundUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF412866842C00C513DC /* BattleGroundUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		945DAF322866842C00C513DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 945DAF192866842900C513DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 945DAF202866842900C513DC;
+			remoteInfo = BattleGround;
+		};
+		945DAF3C2866842C00C513DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 945DAF192866842900C513DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 945DAF202866842900C513DC;
+			remoteInfo = BattleGround;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		945DAF212866842900C513DC /* BattleGround.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BattleGround.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		945DAF242866842900C513DC /* BattleGroundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleGroundApp.swift; sourceTree = "<group>"; };
+		945DAF262866842900C513DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		945DAF282866842B00C513DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		945DAF2B2866842B00C513DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		945DAF312866842C00C513DC /* BattleGroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BattleGroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		945DAF352866842C00C513DC /* BattleGroundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleGroundTests.swift; sourceTree = "<group>"; };
+		945DAF3B2866842C00C513DC /* BattleGroundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BattleGroundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		945DAF3F2866842C00C513DC /* BattleGroundUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleGroundUITests.swift; sourceTree = "<group>"; };
+		945DAF412866842C00C513DC /* BattleGroundUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleGroundUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		945DAF1E2866842900C513DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		945DAF2E2866842C00C513DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		945DAF382866842C00C513DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		945DAF182866842900C513DC = {
+			isa = PBXGroup;
+			children = (
+				945DAF232866842900C513DC /* BattleGround */,
+				945DAF342866842C00C513DC /* BattleGroundTests */,
+				945DAF3E2866842C00C513DC /* BattleGroundUITests */,
+				945DAF222866842900C513DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		945DAF222866842900C513DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				945DAF212866842900C513DC /* BattleGround.app */,
+				945DAF312866842C00C513DC /* BattleGroundTests.xctest */,
+				945DAF3B2866842C00C513DC /* BattleGroundUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		945DAF232866842900C513DC /* BattleGround */ = {
+			isa = PBXGroup;
+			children = (
+				945DAF242866842900C513DC /* BattleGroundApp.swift */,
+				945DAF262866842900C513DC /* ContentView.swift */,
+				945DAF282866842B00C513DC /* Assets.xcassets */,
+				945DAF2A2866842B00C513DC /* Preview Content */,
+			);
+			path = BattleGround;
+			sourceTree = "<group>";
+		};
+		945DAF2A2866842B00C513DC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				945DAF2B2866842B00C513DC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		945DAF342866842C00C513DC /* BattleGroundTests */ = {
+			isa = PBXGroup;
+			children = (
+				945DAF352866842C00C513DC /* BattleGroundTests.swift */,
+			);
+			path = BattleGroundTests;
+			sourceTree = "<group>";
+		};
+		945DAF3E2866842C00C513DC /* BattleGroundUITests */ = {
+			isa = PBXGroup;
+			children = (
+				945DAF3F2866842C00C513DC /* BattleGroundUITests.swift */,
+				945DAF412866842C00C513DC /* BattleGroundUITestsLaunchTests.swift */,
+			);
+			path = BattleGroundUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		945DAF202866842900C513DC /* BattleGround */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 945DAF452866842C00C513DC /* Build configuration list for PBXNativeTarget "BattleGround" */;
+			buildPhases = (
+				945DAF1D2866842900C513DC /* Sources */,
+				945DAF1E2866842900C513DC /* Frameworks */,
+				945DAF1F2866842900C513DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BattleGround;
+			productName = BattleGround;
+			productReference = 945DAF212866842900C513DC /* BattleGround.app */;
+			productType = "com.apple.product-type.application";
+		};
+		945DAF302866842C00C513DC /* BattleGroundTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 945DAF482866842C00C513DC /* Build configuration list for PBXNativeTarget "BattleGroundTests" */;
+			buildPhases = (
+				945DAF2D2866842C00C513DC /* Sources */,
+				945DAF2E2866842C00C513DC /* Frameworks */,
+				945DAF2F2866842C00C513DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				945DAF332866842C00C513DC /* PBXTargetDependency */,
+			);
+			name = BattleGroundTests;
+			productName = BattleGroundTests;
+			productReference = 945DAF312866842C00C513DC /* BattleGroundTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		945DAF3A2866842C00C513DC /* BattleGroundUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 945DAF4B2866842C00C513DC /* Build configuration list for PBXNativeTarget "BattleGroundUITests" */;
+			buildPhases = (
+				945DAF372866842C00C513DC /* Sources */,
+				945DAF382866842C00C513DC /* Frameworks */,
+				945DAF392866842C00C513DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				945DAF3D2866842C00C513DC /* PBXTargetDependency */,
+			);
+			name = BattleGroundUITests;
+			productName = BattleGroundUITests;
+			productReference = 945DAF3B2866842C00C513DC /* BattleGroundUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		945DAF192866842900C513DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					945DAF202866842900C513DC = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					945DAF302866842C00C513DC = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 945DAF202866842900C513DC;
+					};
+					945DAF3A2866842C00C513DC = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 945DAF202866842900C513DC;
+					};
+				};
+			};
+			buildConfigurationList = 945DAF1C2866842900C513DC /* Build configuration list for PBXProject "BattleGround" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 945DAF182866842900C513DC;
+			productRefGroup = 945DAF222866842900C513DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				945DAF202866842900C513DC /* BattleGround */,
+				945DAF302866842C00C513DC /* BattleGroundTests */,
+				945DAF3A2866842C00C513DC /* BattleGroundUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		945DAF1F2866842900C513DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				945DAF2C2866842B00C513DC /* Preview Assets.xcassets in Resources */,
+				945DAF292866842B00C513DC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		945DAF2F2866842C00C513DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		945DAF392866842C00C513DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		945DAF1D2866842900C513DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				945DAF272866842900C513DC /* ContentView.swift in Sources */,
+				945DAF252866842900C513DC /* BattleGroundApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		945DAF2D2866842C00C513DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				945DAF362866842C00C513DC /* BattleGroundTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		945DAF372866842C00C513DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				945DAF402866842C00C513DC /* BattleGroundUITests.swift in Sources */,
+				945DAF422866842C00C513DC /* BattleGroundUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		945DAF332866842C00C513DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 945DAF202866842900C513DC /* BattleGround */;
+			targetProxy = 945DAF322866842C00C513DC /* PBXContainerItemProxy */;
+		};
+		945DAF3D2866842C00C513DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 945DAF202866842900C513DC /* BattleGround */;
+			targetProxy = 945DAF3C2866842C00C513DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		945DAF432866842C00C513DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		945DAF442866842C00C513DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		945DAF462866842C00C513DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BattleGround/Preview Content\"";
+				DEVELOPMENT_TEAM = 2FJ285KPR8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "maruno-hiroshi.BattleGround";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		945DAF472866842C00C513DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BattleGround/Preview Content\"";
+				DEVELOPMENT_TEAM = 2FJ285KPR8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "maruno-hiroshi.BattleGround";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		945DAF492866842C00C513DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2FJ285KPR8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "maruno-hiroshi.BattleGroundTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BattleGround.app/BattleGround";
+			};
+			name = Debug;
+		};
+		945DAF4A2866842C00C513DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2FJ285KPR8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "maruno-hiroshi.BattleGroundTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BattleGround.app/BattleGround";
+			};
+			name = Release;
+		};
+		945DAF4C2866842C00C513DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2FJ285KPR8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "maruno-hiroshi.BattleGroundUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BattleGround;
+			};
+			name = Debug;
+		};
+		945DAF4D2866842C00C513DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2FJ285KPR8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "maruno-hiroshi.BattleGroundUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BattleGround;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		945DAF1C2866842900C513DC /* Build configuration list for PBXProject "BattleGround" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				945DAF432866842C00C513DC /* Debug */,
+				945DAF442866842C00C513DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		945DAF452866842C00C513DC /* Build configuration list for PBXNativeTarget "BattleGround" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				945DAF462866842C00C513DC /* Debug */,
+				945DAF472866842C00C513DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		945DAF482866842C00C513DC /* Build configuration list for PBXNativeTarget "BattleGroundTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				945DAF492866842C00C513DC /* Debug */,
+				945DAF4A2866842C00C513DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		945DAF4B2866842C00C513DC /* Build configuration list for PBXNativeTarget "BattleGroundUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				945DAF4C2866842C00C513DC /* Debug */,
+				945DAF4D2866842C00C513DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 945DAF192866842900C513DC /* Project object */;
+}
