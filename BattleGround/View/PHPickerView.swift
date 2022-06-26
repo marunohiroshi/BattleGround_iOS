@@ -5,8 +5,8 @@
 //  Created by 丸野拓志 on 2022/05/15.
 //
 
-import SwiftUI
 import PhotosUI
+import SwiftUI
 
 struct PHPickerView: UIViewControllerRepresentable {
     @Binding var isShowSheet: Bool
@@ -25,7 +25,6 @@ struct PHPickerView: UIViewControllerRepresentable {
         // フォトライブラリで写真を選択、キャンセルしたときに実行される
         // delegateメソッドを必ず用意
         func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
-
             // 写真は一つだけ選べる設定なので最初の一件を指定
             if let result = results.first {
                 // 写真の取得は非同期で実施

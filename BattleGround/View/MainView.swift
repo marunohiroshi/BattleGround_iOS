@@ -5,8 +5,8 @@
 //  Created by 丸野拓志 on 2022/06/20.
 //
 
-import SwiftUI
 import RealmSwift
+import SwiftUI
 
 struct MainView: View {
     @Environment(\.scenePhase) private var scenePhase
@@ -57,7 +57,7 @@ struct MainView: View {
                         }
                     }
                 }
-                .navigationBarTitle("") // this must be empty
+                .navigationBarTitle("")
                 .navigationBarHidden(true)
                 .navigationBarBackButtonHidden(true)
 

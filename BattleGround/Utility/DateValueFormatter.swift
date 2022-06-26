@@ -5,11 +5,10 @@
 //  Created by 丸野拓志 on 2022/06/25.
 //
 
-import SwiftUI
 import Charts
+import SwiftUI
 
 class DateValueFormatter: NSObject, AxisValueFormatter {
-
     let dateFormatter = DateFormatter()
     var startDate: Date
 

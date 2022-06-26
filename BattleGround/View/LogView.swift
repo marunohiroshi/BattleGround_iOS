@@ -54,7 +54,6 @@ struct LogView: View, Identifiable {
                             .foregroundColor(Color.red)
                     }
                     Spacer()
-
                 }
                 .frame(alignment: .leading)
                 HStack {
@@ -68,7 +67,6 @@ struct LogView: View, Identifiable {
             Spacer()
             Text(String(currentRate))
                 .font(.largeTitle)
-
         }
     }
 }

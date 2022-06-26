@@ -5,11 +5,11 @@
 //  Created by 丸野拓志 on 2022/06/22.
 //
 
-import SwiftUI
 import Charts
+import SwiftUI
 
 struct ChartView: View {
-    @State var isShowChart: Bool = false
+    @State var isShowChart = false
 
     var body: some View {
         ScrollView {
@@ -32,7 +32,6 @@ struct ChartView: View {
 }
 
 struct ChartViewControllerWrapper: UIViewControllerRepresentable {
-
     func makeUIViewController(context: Context) -> ChartViewController {
         ChartViewController()
     }
@@ -43,7 +42,6 @@ struct ChartViewControllerWrapper: UIViewControllerRepresentable {
 }
 
 class ChartViewController: UIViewController {
-
     var chartView: LineChartView!
     var chartDataSet: LineChartDataSet!
 
@@ -85,7 +83,7 @@ class ChartViewController: UIViewController {
         chartView.xAxis.valueFormatter = formatter
 
         // Y軸(leftAxis/rightAxis)
-        chartView.leftAxis.axisMaximum = (data.max() ?? 10000) + 100 // y左軸最大値
+        chartView.leftAxis.axisMaximum = (data.max() ?? 10_000) + 100 // y左軸最大値
         chartView.leftAxis.axisMinimum = (data.min() ?? 0) - 100 // y左軸最小値
         chartView.leftAxis.labelCount = 6 // y軸ラベルの数
         chartView.rightAxis.enabled = false // 右側の縦軸ラベルを非表示

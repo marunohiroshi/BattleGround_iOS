@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct HomeView: View {
-
     @State private var isShowMenuView = false
     @State private var isShowActionSheet = false
 
@@ -43,13 +42,10 @@ struct HomeView: View {
                                     ActionSheet(title: Text("ログの並び順"), buttons:
                                                     [
                                                         .default(Text("順位")) {
-
                                                         },
                                                         .default(Text("日付")) {
-
                                                         },
                                                         .default(Text("お気に入り")) {
-
                                                         },
                                                         .cancel()
                                                     ]

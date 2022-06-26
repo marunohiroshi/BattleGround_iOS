@@ -5,9 +5,9 @@
 //  Created by 丸野拓志 on 2022/06/02.
 //
 
-import RealmSwift
-import Realm
 import Foundation
+import Realm
+import RealmSwift
 // Realm用のClass
 class LogDataModel: ObservableObject {
     var config: Realm.Configuration
@@ -56,12 +56,12 @@ class LogDataModel: ObservableObject {
     func delete(id: String) {
         objectWillChange.send()
         let realm = try! Realm()
-        guard let LogDataItem = items.first(where: { $0.id == id }) else {
+        guard let logDataItem = items.first(where: { $0.id == id }) else {
             return
         }
         do {
             try realm.write {
-                realm.delete(LogDataItem)
+                realm.delete(logDataItem)
                 ChartData.setLogDataList(logDataList: Array(items))
             }
         } catch {
@@ -71,25 +71,24 @@ class LogDataModel: ObservableObject {
 
     func update(id: String, newItem: LogDataItem) {
         objectWillChange.send()
-        guard let LogDataItem = items.first(where: { $0.id == id }) else {
+        guard let logDataItem = items.first(where: { $0.id == id }) else {
             return
         }
         do {
             try realm.write {
-                LogDataItem.heroImage = newItem.heroImage
-                LogDataItem.heroName = newItem.heroName
-                LogDataItem.currentRate = newItem.currentRate
-                LogDataItem.rank = newItem.rank
-                LogDataItem.pointChange = newItem.pointChange
-                LogDataItem.screenShot = newItem.screenShot
-                LogDataItem.battleDate = newItem.battleDate
-                LogDataItem.memo = newItem.memo
+                logDataItem.heroImage = newItem.heroImage
+                logDataItem.heroName = newItem.heroName
+                logDataItem.currentRate = newItem.currentRate
+                logDataItem.rank = newItem.rank
+                logDataItem.pointChange = newItem.pointChange
+                logDataItem.screenShot = newItem.screenShot
+                logDataItem.battleDate = newItem.battleDate
+                logDataItem.memo = newItem.memo
             }
         } catch {
             print(error.localizedDescription)
         }
     }
-
 }
 
 class LogDataItem: Object, Identifiable {

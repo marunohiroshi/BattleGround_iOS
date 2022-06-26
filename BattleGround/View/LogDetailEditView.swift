@@ -83,16 +83,16 @@ struct LogDetailEditView: View {
                 }
                 Section(header: Text("順位").font(.headline)) {
                     Picker("順位", selection: $rank, content: {
-                        ForEach(1..<9) {n in
-                            Text(String(n))
+                        ForEach(1..<9) {number in
+                            Text(String(number))
                         }
                     })
                 }
 
                 Section(header: Text("レート変動").font(.headline)) {
                     Picker("レート変動", selection: $pointChange, content: {
-                        ForEach(-300..<301) {n in
-                            Text(String(n))
+                        ForEach(-300..<301) { number in
+                            Text(String(number))
                         }
                     })
                     .onChange(of: pointChange, perform: {newValue in
@@ -112,7 +112,7 @@ struct LogDetailEditView: View {
                 }
 
                 Section(header: Text("現在のレート").font(.headline)) {
-                    TextField("", text: $currentRate.IntToStrDef(
+                    TextField("", text: $currentRate.changeIntToStrDef(
                                 currentRate))
                         .keyboardType(.numberPad)
                         .focused($focusedField, equals: .currentRate)

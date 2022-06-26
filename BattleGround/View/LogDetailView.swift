@@ -133,5 +133,4 @@ struct LogDetailView: View {
             )
         }
     }
-
 }

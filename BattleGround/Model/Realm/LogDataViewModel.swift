@@ -6,8 +6,8 @@
 //
 
 import Foundation
-import SwiftUI
 import RealmSwift
+import SwiftUI
 
 class LogDataViewModel: ObservableObject {
     @Published var model = LogDataModel()

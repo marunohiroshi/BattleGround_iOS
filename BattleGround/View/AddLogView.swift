@@ -67,22 +67,22 @@ struct AddLogView: View {
                 }
                 Section(header: Text("順位").font(.headline)) {
                     Picker("順位", selection: $rank, content: {
-                        ForEach(1..<9) {n in
-                            Text(String(n))
+                        ForEach(1..<9) {number in
+                            Text(String(number))
                         }
                     })
                 }
 
                 Section(header: Text("レート変動").font(.headline)) {
                     Picker("レート変動", selection: $pointChange, content: {
-                        ForEach(-300..<301) {n in
-                            Text(String(n))
+                        ForEach(-300..<301) {number in
+                            Text(String(number))
                         }
                     })
                     .onChange(of: pointChange, perform: {newValue in
                         currentRate = currentRateFirstValue
                         print(newValue)
-                        currentRate = currentRate + newValue - 300
+                        currentRate += newValue - 300
                         if currentRate < 0 {
                             currentRate = 0
                         }
@@ -91,10 +91,9 @@ struct AddLogView: View {
                 }
 
                 Section(header: Text("現在のレート").font(.headline)) {
-                    TextField("", text: $currentRate.IntToStrDef(currentRate))
+                    TextField("", text: $currentRate.changeIntToStrDef(currentRate))
                         .keyboardType(.numberPad)
                         .focused($focusedField, equals: .currentRate)
-
                 }
                 .contentShape(RoundedRectangle(cornerRadius: 10))
                 .onTapGesture {
@@ -174,7 +173,6 @@ struct AddLogView: View {
                     viewModel.add(heroImage: heroImage!, heroName: selectedHero.heroName, rank: rank + 1, currentRate: currentRate, pointChange: pointChange - 300, deckType: deckTypeTitle, banType: banTypeTitle, screenShot: screenShot, battleDate: battleDate, memo: memo)
                 }, label: {
                     Text("追加")
-
                 })
             }
             .onTapGesture {
@@ -229,7 +227,7 @@ struct AddLogView: View {
 
 struct AddLogView_Previews: PreviewProvider {
     static var previews: some View {
-        AddLogView(currentRate: 10000)
+        AddLogView(currentRate: 10_000)
             .environment(\.locale, Locale(identifier: "ja_JP"))
     }
 }
@@ -248,7 +246,6 @@ struct MultipleSelectionList: View, Identifiable {
     var isDeckTypeSelect: Bool
 
     var body: some View {
-
         List {
             ForEach(self.items, id: \.self) { item in
                 MultipleSelectionRow(title: item, isSelected: selections.contains(item), addLogView: addLogView, isDeckTypeSelect: isDeckTypeSelect) {
@@ -297,7 +294,7 @@ enum Field: Hashable {
 }
 
 extension Binding where Value == Int {
-    func IntToStrDef(_ def: Int) -> Binding<String> {
+    func changeIntToStrDef(_ def: Int) -> Binding<String> {
         Binding<String>(get: {
             String(self.wrappedValue)
         }) { value in

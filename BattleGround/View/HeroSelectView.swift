@@ -18,25 +18,25 @@ struct HeroSelectView: View {
     var body: some View {
         ScrollView {
             VStack {
-                ForEach(0..<(HeroData.heroImageList.count / 4) + 1) {v_number in
+                ForEach(0..<(HeroData.heroImageList.count / 4) + 1) {verticalNumber in
                     HStack {
-                        ForEach(0..<4) {h_number in
+                        ForEach(0..<4) {horizontalNumber in
                             if roopCount < HeroData.heroImageList.count {
                                 addSelectedIndex()
                                 Button(action: {
-                                    print(v_number)
-                                    print(h_number)
+                                    print(verticalNumber)
+                                    print(horizontalNumber)
                                     isShowHeroSelectView.toggle()
-                                    SelectedHeroData.selectedHeroData = HeroData.heroDataList[((v_number + 1) * 4) - (4 - (h_number + 1)) - 1]
-                                    self.selectedHero = HeroData.heroDataList[((v_number + 1) * 4) - (4 - (h_number + 1)) - 1]
-                                    print(HeroData.heroDataList[((v_number + 1) * 4) - (4 - (h_number + 1)) - 1])
+                                    SelectedHeroData.selectedHeroData = HeroData.heroDataList[((verticalNumber + 1) * 4) - (4 - (horizontalNumber + 1)) - 1]
+                                    self.selectedHero = HeroData.heroDataList[((verticalNumber + 1) * 4) - (4 - (horizontalNumber + 1)) - 1]
+                                    print(HeroData.heroDataList[((verticalNumber + 1) * 4) - (4 - (horizontalNumber + 1)) - 1])
                                 }, label: {
                                     HeroImage(heroImage: HeroData.heroImageList[roopCount])
                                 })
                             } else {
                                 Button(action: {
-                                    print(v_number)
-                                    print(h_number)
+                                    print(verticalNumber)
+                                    print(horizontalNumber)
                                 }, label: {
                                     HeroImage(heroImage: HeroData.heroImageList[1])
                                 })
