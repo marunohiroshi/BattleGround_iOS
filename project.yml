@@ -1,0 +1,6 @@
+name: BattleGround
+dependencies:
+  - framework: "Carthage/Build/Device.xcframework"
+  - framework: "Carthage/Build/Charts.xcframework"
+  - framework: "Carthage/Build/RealmSwift.xcframework"
+  - framework: "Carthage/Build/Realm.xcframework"
