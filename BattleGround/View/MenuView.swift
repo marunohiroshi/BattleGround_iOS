@@ -9,11 +9,11 @@ import SwiftUI
 
 struct MenuView: View {
     @Binding var isShowMenuView: Bool
-    
+
     init(isShowMenuView: Binding<Bool>) {
         _isShowMenuView = isShowMenuView
     }
-    
+
     var body: some View {
         GeometryReader { geometry in
             HStack {
@@ -27,14 +27,14 @@ struct MenuView: View {
                                 .frame(width: 60, height: 60)
                                 .clipShape(Circle())
                             Spacer()
-//                            Button(action: {
-//                                isShowMenuView = false
-//                            }, label: {
-//                                VStack {
-//                                    Image(systemName: "arrowshape.turn.up.right")
-//                                    Text("戻る")
-//                                }
-//                            })
+                            //                            Button(action: {
+                            //                                isShowMenuView = false
+                            //                            }, label: {
+                            //                                VStack {
+                            //                                    Image(systemName: "arrowshape.turn.up.right")
+                            //                                    Text("戻る")
+                            //                                }
+                            //                            })
                         }
                         Text("ボブの酒場へようこそ")
                             .font(.largeTitle)

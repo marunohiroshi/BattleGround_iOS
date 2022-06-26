@@ -11,7 +11,7 @@ struct AddLogView: View {
     @Environment(\.scenePhase) private var scenePhase
     @Environment(\.presentationMode) var presentation
     @EnvironmentObject var viewModel: LogDataViewModel
-    
+
     @State var heroName = "test"
     @State var isShowHeroSelectView = false
     @State var rank = Int.random(in: 0..<8)
@@ -33,12 +33,12 @@ struct AddLogView: View {
     @State var isShowPhotoLibrary = false
     @State var selectedHero = HeroData.heroDataList[Int.random(in: 0..<HeroData.heroDataList.count)]
     @State var isMoveToHome = false
-    
+
     init(currentRate: Int) {
         _currentRate = State(initialValue: currentRate)
         currentRateFirstValue = currentRate
     }
-    
+
     var body: some View {
         NavigationView {
             Form {
@@ -53,7 +53,7 @@ struct AddLogView: View {
                                     .scaledToFit()
                                     .frame(width: 50, height: 70)
                                     .aspectRatio(contentMode: .fit)
-                                
+
                                 Text(self.selectedHero.heroName)
                                     .foregroundColor(Color.black)
                             }
@@ -72,7 +72,7 @@ struct AddLogView: View {
                         }
                     })
                 }
-                
+
                 Section(header: Text("レート変動").font(.headline)) {
                     Picker("レート変動", selection: $pointChange, content: {
                         ForEach(-300..<301) {n in
@@ -89,18 +89,18 @@ struct AddLogView: View {
                     })
                     .pickerStyle(WheelPickerStyle())
                 }
-                
+
                 Section(header: Text("現在のレート").font(.headline)) {
                     TextField("", text: $currentRate.IntToStrDef(currentRate))
                         .keyboardType(.numberPad)
                         .focused($focusedField, equals: .currentRate)
-                        
+
                 }
                 .contentShape(RoundedRectangle(cornerRadius: 10))
                 .onTapGesture {
                     focusedField = nil
                 }
-                
+
                 Section(header: Text("デッキタイプ").font(.headline).navigationBarTitle("ログを追加", displayMode: .inline)
                 ) {
                     NavigationLink(deckTypeTitle, destination: MultipleSelectionList(items: ["マーロック", "メカ", "獣", "悪魔", "海賊", "ドラゴン", "エレメンタル", "キルボア", "ナーガ", "毒", "混成", "断末魔", "聖なる盾", "疾風", "憤怒の織屋", "地響き使い", "ブラン", "バロン", "ノミ", "ライトスポーン"], addLogView: self, isDeckTypeSelect: true))
@@ -156,16 +156,15 @@ struct AddLogView: View {
                 }
             }
             .navigationBarItems(leading: NavigationLink(destination: HomeView()
-                .navigationBarHidden(true)) {
-                    Button(action: {
-                        self.presentation.wrappedValue.dismiss()
-                    }, label: {
-                        Image(systemName: "xmark")
-                    })
-                }, trailing: NavigationLink(destination: HomeView(
-                ).navigationBarTitle("").navigationBarHidden(true)
-                    .navigationBarBackButtonHidden(true)
-                                            , isActive: $isMoveToHome) {
+                                                            .navigationBarHidden(true)) {
+                Button(action: {
+                    self.presentation.wrappedValue.dismiss()
+                }, label: {
+                    Image(systemName: "xmark")
+                })
+            }, trailing: NavigationLink(destination: HomeView(
+            ).navigationBarTitle("").navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true), isActive: $isMoveToHome) {
                 Button(action: {
                     print("onTapGesture")
                     focusedField = nil
@@ -175,16 +174,16 @@ struct AddLogView: View {
                     viewModel.add(heroImage: heroImage!, heroName: selectedHero.heroName, rank: rank + 1, currentRate: currentRate, pointChange: pointChange - 300, deckType: deckTypeTitle, banType: banTypeTitle, screenShot: screenShot, battleDate: battleDate, memo: memo)
                 }, label: {
                     Text("追加")
-                    
+
                 })
             }
-                .onTapGesture {
-                    print("onTapGesture")
-                }
+            .onTapGesture {
+                print("onTapGesture")
+            }
             )
         }
     }
-    
+
     func addDeckTypeList(title: String, isSelected: Bool, isDeckTypeSelect: Bool) {
         if isDeckTypeSelect {
             if !isSelected {
@@ -197,7 +196,7 @@ struct AddLogView: View {
                 }
             }
             deckTypeTitle.removeAll()
-            
+
             for num in deckTypeList {
                 if !deckTypeTitle.isEmpty {
                     deckTypeTitle.append("、")
@@ -216,7 +215,7 @@ struct AddLogView: View {
                 }
             }
             banTypeTitle.removeAll()
-            
+
             for num in banTypeList {
                 if !banTypeTitle.isEmpty {
                     banTypeTitle.append("、")
@@ -247,9 +246,9 @@ struct MultipleSelectionList: View, Identifiable {
     @State var selections: [String] = []
     var addLogView: AddLogView
     var isDeckTypeSelect: Bool
-    
+
     var body: some View {
-        
+
         List {
             ForEach(self.items, id: \.self) { item in
                 MultipleSelectionRow(title: item, isSelected: selections.contains(item), addLogView: addLogView, isDeckTypeSelect: isDeckTypeSelect) {
@@ -275,7 +274,7 @@ struct MultipleSelectionRow: View {
     var addLogView: AddLogView
     var isDeckTypeSelect: Bool
     var action: () -> Void
-    
+
     var body: some View {
         Button(action: {
             action()

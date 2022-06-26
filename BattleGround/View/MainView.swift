@@ -57,9 +57,9 @@ struct MainView: View {
                         }
                     }
                 }
-                .navigationBarTitle("") //this must be empty
-                    .navigationBarHidden(true)
-                    .navigationBarBackButtonHidden(true)
+                .navigationBarTitle("") // this must be empty
+                .navigationBarHidden(true)
+                .navigationBarBackButtonHidden(true)
 
                 if isShowingFloatButton {
                     FloatButton(currentRate: logDataList.first?.currentRate ?? 0)

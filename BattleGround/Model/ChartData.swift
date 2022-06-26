@@ -9,11 +9,11 @@ import Foundation
 
 class ChartData {
     static var logDataList: [LogDataItem] = []
-    
-    static func getLogDataList() -> [LogDataItem]{
+
+    static func getLogDataList() -> [LogDataItem] {
         logDataList
     }
-    
+
     static func setLogDataList(logDataList: [LogDataItem]) {
         self.logDataList = logDataList
     }

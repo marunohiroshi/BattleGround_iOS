@@ -8,15 +8,15 @@
 import SwiftUI
 import Charts
 
-class DateValueFormatter: NSObject , AxisValueFormatter{
- 
+class DateValueFormatter: NSObject, AxisValueFormatter {
+
     let dateFormatter = DateFormatter()
-    var startDate:Date
- 
-    init(startDate:Date) {
+    var startDate: Date
+
+    init(startDate: Date) {
         self.startDate = startDate
     }
- 
+
     public func stringForValue(_ value: Double, axis: AxisBase?) -> String {
         let modifiedDate = Calendar.current.date(byAdding: .day, value: Int(value), to: startDate )!
         dateFormatter.dateFormat = "M/d"

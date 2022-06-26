@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct HomeView: View {
-    
+
     @State private var isShowMenuView = false
     @State private var isShowActionSheet = false
-    
+
     var body: some View {
         NavigationView {
-            GeometryReader { geometry in
+            GeometryReader { _ in
                 TabView {
                     ZStack(alignment: .leading) {
                         // メインコンテンツ
@@ -43,13 +43,13 @@ struct HomeView: View {
                                     ActionSheet(title: Text("ログの並び順"), buttons:
                                                     [
                                                         .default(Text("順位")) {
-                                                            
+
                                                         },
                                                         .default(Text("日付")) {
-                                                            
+
                                                         },
                                                         .default(Text("お気に入り")) {
-                                                            
+
                                                         },
                                                         .cancel()
                                                     ]
@@ -58,7 +58,7 @@ struct HomeView: View {
                             }
                             MainView()
                         }
-                        
+
                         if isShowMenuView {
                             // スライドメニューがでてきたらメインコンテンツをグレイアウトします
                             Color.gray.opacity(
@@ -73,7 +73,7 @@ struct HomeView: View {
                         Image(systemName: "note.text.badge.plus")
                         Text("ログ")
                     }
-                    
+
                     ChartView()
                         .tabItem {
                             Image(systemName: "books.vertical")
@@ -82,14 +82,13 @@ struct HomeView: View {
                 }
             }
         }.navigationBarBackButtonHidden(true)
-            .navigationBarTitle("")
+        .navigationBarTitle("")
     }
-    
-    
+
     // struct ContentView_Previews: PreviewProvider {
     //    static var previews: some View {
     //        ContentView()
     //    }
     // }
-    
+
 }
