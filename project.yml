@@ -4,3 +4,7 @@ dependencies:
   - framework: "Carthage/Build/Charts.xcframework"
   - framework: "Carthage/Build/RealmSwift.xcframework"
   - framework: "Carthage/Build/Realm.xcframework"
+
+  .PHONY: install-carthage
+install-carthage:
+    carthage update --use-xcframeworks --platform iOS --cache-builds  --no-use-binaries
