@@ -8,12 +8,37 @@
 
 /* Begin PBXBuildFile section */
 		945DAF252866842900C513DC /* BattleGroundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF242866842900C513DC /* BattleGroundApp.swift */; };
-		945DAF272866842900C513DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF262866842900C513DC /* ContentView.swift */; };
 		945DAF292866842B00C513DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 945DAF282866842B00C513DC /* Assets.xcassets */; };
 		945DAF2C2866842B00C513DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 945DAF2B2866842B00C513DC /* Preview Assets.xcassets */; };
 		945DAF362866842C00C513DC /* BattleGroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF352866842C00C513DC /* BattleGroundTests.swift */; };
 		945DAF402866842C00C513DC /* BattleGroundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF3F2866842C00C513DC /* BattleGroundUITests.swift */; };
 		945DAF422866842C00C513DC /* BattleGroundUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF412866842C00C513DC /* BattleGroundUITestsLaunchTests.swift */; };
+		945DAF502866852B00C513DC /* FloatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF4F2866852B00C513DC /* FloatButton.swift */; };
+		945DAF542866858700C513DC /* HeroData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF532866858700C513DC /* HeroData.swift */; };
+		945DAF56286685BE00C513DC /* SelectedHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF55286685BE00C513DC /* SelectedHero.swift */; };
+		945DAF58286685E900C513DC /* LogDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF57286685E900C513DC /* LogDataModel.swift */; };
+		945DAF5A2866860600C513DC /* LogDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF592866860600C513DC /* LogDataViewModel.swift */; };
+		945DAF5D2866864B00C513DC /* DateUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF5C2866864B00C513DC /* DateUtility.swift */; };
+		945DAF5F2866866300C513DC /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF5E2866866300C513DC /* Utility.swift */; };
+		945DAF62286686A800C513DC /* AddLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF61286686A800C513DC /* AddLogView.swift */; };
+		945DAF64286686C600C513DC /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF63286686C600C513DC /* ChartView.swift */; };
+		945DAF66286686DE00C513DC /* HeroSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF65286686DE00C513DC /* HeroSelectView.swift */; };
+		945DAF68286686F700C513DC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF67286686F700C513DC /* HomeView.swift */; };
+		945DAF6A2866871700C513DC /* LogDetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF692866871700C513DC /* LogDetailEditView.swift */; };
+		945DAF6C2866873400C513DC /* LogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF6B2866873400C513DC /* LogDetailView.swift */; };
+		945DAF6E2866875000C513DC /* LogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF6D2866875000C513DC /* LogView.swift */; };
+		945DAF702866876600C513DC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF6F2866876600C513DC /* MainView.swift */; };
+		945DAF722866877D00C513DC /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF712866877D00C513DC /* MenuView.swift */; };
+		945DAF742866879800C513DC /* PHPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF732866879800C513DC /* PHPickerView.swift */; };
+		945DAF8A2866908100C513DC /* BanType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF892866908100C513DC /* BanType.swift */; };
+		945DAF8C2866909800C513DC /* DeckType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF8B2866909800C513DC /* DeckType.swift */; };
+		945DAF902866968C00C513DC /* Realm.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 945DAF852866901500C513DC /* Realm.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		945DAF932866968E00C513DC /* RealmSwift.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 945DAF872866901900C513DC /* RealmSwift.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		945DAF942866983300C513DC /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945DAF7A28668ACC00C513DC /* Realm.framework */; };
+		945DAF952866983500C513DC /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945DAF7C28668AD700C513DC /* RealmSwift.framework */; };
+		945DAF9F2866A7D100C513DC /* Charts.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945DAF832866900F00C513DC /* Charts.xcframework */; };
+		945DAFA12866E2D400C513DC /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAFA02866E2D400C513DC /* ChartData.swift */; };
+		945DAFA32866EE3400C513DC /* DateValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAFA22866EE3400C513DC /* DateValueFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,10 +58,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		945DAF912866968C00C513DC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				945DAF902866968C00C513DC /* Realm.xcframework in Embed Frameworks */,
+				945DAF932866968E00C513DC /* RealmSwift.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		945DAF212866842900C513DC /* BattleGround.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BattleGround.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		945DAF242866842900C513DC /* BattleGroundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleGroundApp.swift; sourceTree = "<group>"; };
-		945DAF262866842900C513DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		945DAF282866842B00C513DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		945DAF2B2866842B00C513DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		945DAF312866842C00C513DC /* BattleGroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BattleGroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +83,38 @@
 		945DAF3B2866842C00C513DC /* BattleGroundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BattleGroundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		945DAF3F2866842C00C513DC /* BattleGroundUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleGroundUITests.swift; sourceTree = "<group>"; };
 		945DAF412866842C00C513DC /* BattleGroundUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleGroundUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		945DAF4F2866852B00C513DC /* FloatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatButton.swift; sourceTree = "<group>"; };
+		945DAF532866858700C513DC /* HeroData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroData.swift; sourceTree = "<group>"; };
+		945DAF55286685BE00C513DC /* SelectedHero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedHero.swift; sourceTree = "<group>"; };
+		945DAF57286685E900C513DC /* LogDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDataModel.swift; sourceTree = "<group>"; };
+		945DAF592866860600C513DC /* LogDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDataViewModel.swift; sourceTree = "<group>"; };
+		945DAF5C2866864B00C513DC /* DateUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtility.swift; sourceTree = "<group>"; };
+		945DAF5E2866866300C513DC /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		945DAF61286686A800C513DC /* AddLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLogView.swift; sourceTree = "<group>"; };
+		945DAF63286686C600C513DC /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		945DAF65286686DE00C513DC /* HeroSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroSelectView.swift; sourceTree = "<group>"; };
+		945DAF67286686F700C513DC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		945DAF692866871700C513DC /* LogDetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDetailEditView.swift; sourceTree = "<group>"; };
+		945DAF6B2866873400C513DC /* LogDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDetailView.swift; sourceTree = "<group>"; };
+		945DAF6D2866875000C513DC /* LogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogView.swift; sourceTree = "<group>"; };
+		945DAF6F2866876600C513DC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		945DAF712866877D00C513DC /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		945DAF732866879800C513DC /* PHPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHPickerView.swift; sourceTree = "<group>"; };
+		945DAF772866883500C513DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		945DAF7A28668ACC00C513DC /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		945DAF7C28668AD700C513DC /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		945DAF7E28668AF900C513DC /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = Carthage/Build/iOS/Charts.framework; sourceTree = "<group>"; };
+		945DAF8128668FE700C513DC /* Charts.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; name = Charts.xcworkspace; path = Carthage/Checkouts/Charts/Charts.xcworkspace; sourceTree = "<group>"; };
+		945DAF832866900F00C513DC /* Charts.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Charts.xcframework; path = Carthage/Build/Charts.xcframework; sourceTree = "<group>"; };
+		945DAF852866901500C513DC /* Realm.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Realm.xcframework; path = Carthage/Build/Realm.xcframework; sourceTree = "<group>"; };
+		945DAF872866901900C513DC /* RealmSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RealmSwift.xcframework; path = Carthage/Build/RealmSwift.xcframework; sourceTree = "<group>"; };
+		945DAF892866908100C513DC /* BanType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanType.swift; sourceTree = "<group>"; };
+		945DAF8B2866909800C513DC /* DeckType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckType.swift; sourceTree = "<group>"; };
+		945DAF8D2866930D00C513DC /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "Carthage/Build/Charts.xcframework/ios-arm64/Charts.framework"; sourceTree = "<group>"; };
+		945DAF972866A35F00C513DC /* Charts.swiftmodule */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Charts.swiftmodule; path = Carthage/Build/iOS/Charts.framework/Modules/Charts.swiftmodule; sourceTree = "<group>"; };
+		945DAF9A2866A38700C513DC /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "Carthage/Build/Charts.xcframework/ios-arm64_x86_64-simulator/Charts.framework"; sourceTree = "<group>"; };
+		945DAFA02866E2D400C513DC /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
+		945DAFA22866EE3400C513DC /* DateValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValueFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +122,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				945DAF942866983300C513DC /* Realm.framework in Frameworks */,
+				945DAF952866983500C513DC /* RealmSwift.framework in Frameworks */,
+				945DAF9F2866A7D100C513DC /* Charts.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +152,7 @@
 				945DAF342866842C00C513DC /* BattleGroundTests */,
 				945DAF3E2866842C00C513DC /* BattleGroundUITests */,
 				945DAF222866842900C513DC /* Products */,
+				945DAF7928668ACC00C513DC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,9 +169,13 @@
 		945DAF232866842900C513DC /* BattleGround */ = {
 			isa = PBXGroup;
 			children = (
-				945DAF242866842900C513DC /* BattleGroundApp.swift */,
-				945DAF262866842900C513DC /* ContentView.swift */,
 				945DAF282866842B00C513DC /* Assets.xcassets */,
+				945DAF772866883500C513DC /* Info.plist */,
+				945DAF242866842900C513DC /* BattleGroundApp.swift */,
+				945DAF602866869400C513DC /* View */,
+				945DAF5B2866862A00C513DC /* Utility */,
+				945DAF512866855000C513DC /* Model */,
+				945DAF4E2866850D00C513DC /* Component */,
 				945DAF2A2866842B00C513DC /* Preview Content */,
 			);
 			path = BattleGround;
@@ -127,6 +206,80 @@
 			path = BattleGroundUITests;
 			sourceTree = "<group>";
 		};
+		945DAF4E2866850D00C513DC /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				945DAF4F2866852B00C513DC /* FloatButton.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		945DAF512866855000C513DC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				945DAF522866856000C513DC /* Realm */,
+				945DAF532866858700C513DC /* HeroData.swift */,
+				945DAF55286685BE00C513DC /* SelectedHero.swift */,
+				945DAF892866908100C513DC /* BanType.swift */,
+				945DAF8B2866909800C513DC /* DeckType.swift */,
+				945DAFA02866E2D400C513DC /* ChartData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		945DAF522866856000C513DC /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				945DAF57286685E900C513DC /* LogDataModel.swift */,
+				945DAF592866860600C513DC /* LogDataViewModel.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		945DAF5B2866862A00C513DC /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				945DAF5C2866864B00C513DC /* DateUtility.swift */,
+				945DAFA22866EE3400C513DC /* DateValueFormatter.swift */,
+				945DAF5E2866866300C513DC /* Utility.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		945DAF602866869400C513DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				945DAF61286686A800C513DC /* AddLogView.swift */,
+				945DAF6D2866875000C513DC /* LogView.swift */,
+				945DAF6B2866873400C513DC /* LogDetailView.swift */,
+				945DAF712866877D00C513DC /* MenuView.swift */,
+				945DAF732866879800C513DC /* PHPickerView.swift */,
+				945DAF6F2866876600C513DC /* MainView.swift */,
+				945DAF692866871700C513DC /* LogDetailEditView.swift */,
+				945DAF63286686C600C513DC /* ChartView.swift */,
+				945DAF65286686DE00C513DC /* HeroSelectView.swift */,
+				945DAF67286686F700C513DC /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		945DAF7928668ACC00C513DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				945DAF9A2866A38700C513DC /* Charts.framework */,
+				945DAF972866A35F00C513DC /* Charts.swiftmodule */,
+				945DAF8D2866930D00C513DC /* Charts.framework */,
+				945DAF872866901900C513DC /* RealmSwift.xcframework */,
+				945DAF852866901500C513DC /* Realm.xcframework */,
+				945DAF832866900F00C513DC /* Charts.xcframework */,
+				945DAF8128668FE700C513DC /* Charts.xcworkspace */,
+				945DAF7E28668AF900C513DC /* Charts.framework */,
+				945DAF7C28668AD700C513DC /* RealmSwift.framework */,
+				945DAF7A28668ACC00C513DC /* Realm.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,6 +290,9 @@
 				945DAF1D2866842900C513DC /* Sources */,
 				945DAF1E2866842900C513DC /* Frameworks */,
 				945DAF1F2866842900C513DC /* Resources */,
+				945DAF7828668A2500C513DC /* ShellScript */,
+				945DAF8028668CD600C513DC /* ShellScript */,
+				945DAF912866968C00C513DC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -252,13 +408,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		945DAF7828668A2500C513DC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Charts.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Charts.framwork",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+		945DAF8028668CD600C513DC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint autocorrect --format # 自動修正の有効化\n  swiftlint\nelse\n  echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		945DAF1D2866842900C513DC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				945DAF272866842900C513DC /* ContentView.swift in Sources */,
+				945DAF502866852B00C513DC /* FloatButton.swift in Sources */,
+				945DAF62286686A800C513DC /* AddLogView.swift in Sources */,
+				945DAF742866879800C513DC /* PHPickerView.swift in Sources */,
+				945DAF6A2866871700C513DC /* LogDetailEditView.swift in Sources */,
+				945DAFA12866E2D400C513DC /* ChartData.swift in Sources */,
+				945DAF5A2866860600C513DC /* LogDataViewModel.swift in Sources */,
+				945DAF64286686C600C513DC /* ChartView.swift in Sources */,
+				945DAF5F2866866300C513DC /* Utility.swift in Sources */,
+				945DAF6C2866873400C513DC /* LogDetailView.swift in Sources */,
+				945DAF722866877D00C513DC /* MenuView.swift in Sources */,
+				945DAF542866858700C513DC /* HeroData.swift in Sources */,
+				945DAF58286685E900C513DC /* LogDataModel.swift in Sources */,
+				945DAF702866876600C513DC /* MainView.swift in Sources */,
+				945DAF56286685BE00C513DC /* SelectedHero.swift in Sources */,
+				945DAFA32866EE3400C513DC /* DateValueFormatter.swift in Sources */,
+				945DAF66286686DE00C513DC /* HeroSelectView.swift in Sources */,
+				945DAF8C2866909800C513DC /* DeckType.swift in Sources */,
+				945DAF68286686F700C513DC /* HomeView.swift in Sources */,
+				945DAF5D2866864B00C513DC /* DateUtility.swift in Sources */,
+				945DAF6E2866875000C513DC /* LogView.swift in Sources */,
 				945DAF252866842900C513DC /* BattleGroundApp.swift in Sources */,
+				945DAF8A2866908100C513DC /* BanType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +634,16 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BattleGround/Preview Content\"";
 				DEVELOPMENT_TEAM = 2FJ285KPR8;
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/Charts.xcframework/ios-arm64",
+					"$(PROJECT_DIR)/Carthage/Build/Charts.xcframework/ios-arm64_x86_64-simulator",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BattleGround/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -435,6 +659,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = NO;
 			};
 			name = Debug;
 		};
@@ -448,7 +673,15 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BattleGround/Preview Content\"";
 				DEVELOPMENT_TEAM = 2FJ285KPR8;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/Charts.xcframework/ios-arm64",
+					"$(PROJECT_DIR)/Carthage/Build/Charts.xcframework/ios-arm64_x86_64-simulator",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BattleGround/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -464,6 +697,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = NO;
 			};
 			name = Release;
 		};
