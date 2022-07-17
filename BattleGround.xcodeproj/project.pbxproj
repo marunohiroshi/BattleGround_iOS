@@ -15,7 +15,7 @@
 		945DAF422866842C00C513DC /* BattleGroundUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF412866842C00C513DC /* BattleGroundUITestsLaunchTests.swift */; };
 		945DAF502866852B00C513DC /* FloatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF4F2866852B00C513DC /* FloatButton.swift */; };
 		945DAF542866858700C513DC /* HeroData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF532866858700C513DC /* HeroData.swift */; };
-		945DAF56286685BE00C513DC /* SelectedHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF55286685BE00C513DC /* SelectedHero.swift */; };
+		945DAF56286685BE00C513DC /* SelectedHeroData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF55286685BE00C513DC /* SelectedHeroData.swift */; };
 		945DAF58286685E900C513DC /* LogDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF57286685E900C513DC /* LogDataModel.swift */; };
 		945DAF5A2866860600C513DC /* LogDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF592866860600C513DC /* LogDataViewModel.swift */; };
 		945DAF5D2866864B00C513DC /* DateUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAF5C2866864B00C513DC /* DateUtility.swift */; };
@@ -39,6 +39,7 @@
 		945DAF9F2866A7D100C513DC /* Charts.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945DAF832866900F00C513DC /* Charts.xcframework */; };
 		945DAFA12866E2D400C513DC /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAFA02866E2D400C513DC /* ChartData.swift */; };
 		945DAFA32866EE3400C513DC /* DateValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945DAFA22866EE3400C513DC /* DateValueFormatter.swift */; };
+		94B0B7E42883C2F1003A316E /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B0B7E32883C2F1003A316E /* PieChart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,7 +86,7 @@
 		945DAF412866842C00C513DC /* BattleGroundUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleGroundUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		945DAF4F2866852B00C513DC /* FloatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatButton.swift; sourceTree = "<group>"; };
 		945DAF532866858700C513DC /* HeroData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroData.swift; sourceTree = "<group>"; };
-		945DAF55286685BE00C513DC /* SelectedHero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedHero.swift; sourceTree = "<group>"; };
+		945DAF55286685BE00C513DC /* SelectedHeroData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedHeroData.swift; sourceTree = "<group>"; };
 		945DAF57286685E900C513DC /* LogDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDataModel.swift; sourceTree = "<group>"; };
 		945DAF592866860600C513DC /* LogDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDataViewModel.swift; sourceTree = "<group>"; };
 		945DAF5C2866864B00C513DC /* DateUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtility.swift; sourceTree = "<group>"; };
@@ -115,6 +116,7 @@
 		945DAF9A2866A38700C513DC /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "Carthage/Build/Charts.xcframework/ios-arm64_x86_64-simulator/Charts.framework"; sourceTree = "<group>"; };
 		945DAFA02866E2D400C513DC /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
 		945DAFA22866EE3400C513DC /* DateValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValueFormatter.swift; sourceTree = "<group>"; };
+		94B0B7E32883C2F1003A316E /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,7 +221,7 @@
 			children = (
 				945DAF522866856000C513DC /* Realm */,
 				945DAF532866858700C513DC /* HeroData.swift */,
-				945DAF55286685BE00C513DC /* SelectedHero.swift */,
+				945DAF55286685BE00C513DC /* SelectedHeroData.swift */,
 				945DAF892866908100C513DC /* BanType.swift */,
 				945DAF8B2866909800C513DC /* DeckType.swift */,
 				945DAFA02866E2D400C513DC /* ChartData.swift */,
@@ -249,6 +251,7 @@
 		945DAF602866869400C513DC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				94B0B7E02883C0A1003A316E /* Chart */,
 				945DAF61286686A800C513DC /* AddLogView.swift */,
 				945DAF6D2866875000C513DC /* LogView.swift */,
 				945DAF6B2866873400C513DC /* LogDetailView.swift */,
@@ -256,7 +259,6 @@
 				945DAF732866879800C513DC /* PHPickerView.swift */,
 				945DAF6F2866876600C513DC /* MainView.swift */,
 				945DAF692866871700C513DC /* LogDetailEditView.swift */,
-				945DAF63286686C600C513DC /* ChartView.swift */,
 				945DAF65286686DE00C513DC /* HeroSelectView.swift */,
 				945DAF67286686F700C513DC /* HomeView.swift */,
 			);
@@ -280,6 +282,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		94B0B7E02883C0A1003A316E /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				945DAF63286686C600C513DC /* ChartView.swift */,
+				94B0B7E32883C2F1003A316E /* PieChart.swift */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -299,6 +310,8 @@
 			dependencies = (
 			);
 			name = BattleGround;
+			packageProductDependencies = (
+			);
 			productName = BattleGround;
 			productReference = 945DAF212866842900C513DC /* BattleGround.app */;
 			productType = "com.apple.product-type.application";
@@ -371,6 +384,8 @@
 				Base,
 			);
 			mainGroup = 945DAF182866842900C513DC;
+			packageReferences = (
+			);
 			productRefGroup = 945DAF222866842900C513DC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -461,11 +476,12 @@
 				945DAF64286686C600C513DC /* ChartView.swift in Sources */,
 				945DAF5F2866866300C513DC /* Utility.swift in Sources */,
 				945DAF6C2866873400C513DC /* LogDetailView.swift in Sources */,
+				94B0B7E42883C2F1003A316E /* PieChart.swift in Sources */,
 				945DAF722866877D00C513DC /* MenuView.swift in Sources */,
 				945DAF542866858700C513DC /* HeroData.swift in Sources */,
 				945DAF58286685E900C513DC /* LogDataModel.swift in Sources */,
 				945DAF702866876600C513DC /* MainView.swift in Sources */,
-				945DAF56286685BE00C513DC /* SelectedHero.swift in Sources */,
+				945DAF56286685BE00C513DC /* SelectedHeroData.swift in Sources */,
 				945DAFA32866EE3400C513DC /* DateValueFormatter.swift in Sources */,
 				945DAF66286686DE00C513DC /* HeroSelectView.swift in Sources */,
 				945DAF8C2866909800C513DC /* DeckType.swift in Sources */,

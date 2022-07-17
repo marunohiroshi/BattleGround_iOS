@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum BanType: String, CaseIterable {
+public enum BanType: String, CaseIterable {
     case murloc = "マーロック"
     case mech = "メカ"
     case beast = "獣"
@@ -18,7 +18,7 @@ enum BanType: String, CaseIterable {
     case quilboar = "キルボア"
     case naga = "ナーガ"
 
-    var id: String {
+    public var id: String {
         self.rawValue
     }
 }

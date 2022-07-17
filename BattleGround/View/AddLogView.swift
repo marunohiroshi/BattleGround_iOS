@@ -162,7 +162,9 @@ struct AddLogView: View {
                     Image(systemName: "xmark")
                 })
             }, trailing: NavigationLink(destination: HomeView(
-            ).navigationBarTitle("").navigationBarHidden(true)
+            )
+            .navigationBarTitle("")
+            .navigationBarHidden(true)
             .navigationBarBackButtonHidden(true), isActive: $isMoveToHome) {
                 Button(action: {
                     print("onTapGesture")

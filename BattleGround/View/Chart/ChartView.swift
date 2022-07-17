@@ -14,12 +14,23 @@ struct ChartView: View {
     var body: some View {
         ScrollView {
             VStack {
-                Text("ポイント変動")
                 if isShowChart {
+                    Spacer(minLength: 50)
+                    Text("ポイント変動")
                     ChartViewControllerWrapper()
+                        .frame(width: .infinity, height: 300)
+
+                    Spacer(minLength: 50)
+
+                    Text("ヒーロー使用回数")
+                    PieChart()
+                        .frame(width: .infinity, height: 300)
+
+                    Spacer(minLength: 50)
                 }
             }
-        }.navigationBarTitle("") // this must be empty
+        }
+        .navigationBarTitle("") // this must be empty
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
         .onDisappear {
@@ -78,8 +89,8 @@ class ChartViewController: UIViewController {
 
         // X軸(xAxis)
         chartView.xAxis.labelPosition = .bottom // x軸ラベルをグラフの下に表示する
-        //        chartView.xAxis.granularity = 1.0 //X軸の表示単位を1.0ごとにする
-        let formatter = DateValueFormatter(startDate: dateList.first ?? Date())
+        chartView.xAxis.granularity = 1.0 // X軸の表示単位を1.0ごとにする
+        let formatter = DateValueFormatter(startDate: dateList.last ?? Date())
         chartView.xAxis.valueFormatter = formatter
 
         // Y軸(leftAxis/rightAxis)
@@ -116,8 +127,77 @@ class ChartViewController: UIViewController {
     }
 }
 
-// struct ChartView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ChartView()
+// struct HorizontalBarChart: UIViewRepresentable {
+//    func makeUIView(context: Context) -> HorizontalBarChartView {
+//        let chartView = HorizontalBarChartView()
+//
+//        chartView.drawBarShadowEnabled = false
+//        chartView.drawValueAboveBarEnabled = true
+//        chartView.highlightPerTapEnabled = false // プロットをタップして選択不可
+//        chartView.legend.enabled = true // グラフ名（凡例）を非表示
+//        chartView.pinchZoomEnabled = false // ピンチズーム不可
+//        chartView.doubleTapToZoomEnabled = false // ダブルタップズーム不可
+//
+//        chartView.maxVisibleCount = 60
+//
+//        let xAxis = chartView.xAxis
+//        xAxis.labelPosition = .bottom
+//        xAxis.labelFont = .systemFont(ofSize: 10)
+//        xAxis.drawAxisLineEnabled = true
+//        xAxis.granularity = 10
+//
+//        let leftAxis = chartView.leftAxis
+//        leftAxis.labelFont = .systemFont(ofSize: 10)
+//        leftAxis.drawAxisLineEnabled = true
+//        leftAxis.drawGridLinesEnabled = true
+//        leftAxis.axisMinimum = 0
+//
+//        let rightAxis = chartView.rightAxis
+//        rightAxis.enabled = true
+//        rightAxis.labelFont = .systemFont(ofSize: 10)
+//        rightAxis.drawAxisLineEnabled = true
+//        rightAxis.axisMinimum = 0
+//
+//        let legend = chartView.legend
+//        legend.horizontalAlignment = .left
+//        legend.verticalAlignment = .bottom
+//        legend.orientation = .horizontal
+//        legend.drawInside = false
+//        legend.form = .square
+//        legend.formSize = 8
+//        legend.font = UIFont(name: "HelveticaNeue-Light", size: 11)!
+//        legend.xEntrySpace = 4
+//
+//        chartView.fitBars = true
+//
+//        let logDataList: [LogDataItem] = ChartData.getLogDataList()
+//        let selectedHeroNameList: [String] = []
+//        let selectedHeroCountList: [Double] = [1, 2, 1]
+//        chartView.data = setDataCount(selectedHeroCountList.count, val: selectedHeroCountList)
+//
+//        chartView.animate(yAxisDuration: 2.5)
+//
+//        return chartView
+//    }
+//
+//    func updateUIView(_ uiView: HorizontalBarChartView, context: Context) {
+//    }
+//
+//    func setDataCount(_ count: Int, val: [Double]) -> BarChartData {
+//        let barWidth = 9.0
+//        let spaceForBar = 10.0
+//
+//        let yVals = (0..<count).map { index -> BarChartDataEntry in
+//            BarChartDataEntry(x: Double(index) * spaceForBar, y: val[index], icon: UIImage(systemName: "rectangle.fill"))
+//        }
+//
+//        let set1 = BarChartDataSet(entries: yVals, label: "ヒーロー使用回数")
+//        set1.drawIconsEnabled = false
+//
+//        let data = BarChartData(dataSet: set1)
+//        data.setValueFont(UIFont(name: "HelveticaNeue-Light", size: 10)!)
+//        data.barWidth = barWidth
+//
+//        return data
 //    }
 // }

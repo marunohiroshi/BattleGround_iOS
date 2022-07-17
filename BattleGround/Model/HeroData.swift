@@ -91,7 +91,9 @@ struct HeroData {
         HeroData(heroName: "偉大なるアカザムザラク", heroImage: UIImage(named: "hero76")),
         HeroData(heroName: "エリーズ・スターシーカー", heroImage: UIImage(named: "hero77")),
         HeroData(heroName: "ピラマッド", heroImage: UIImage(named: "hero78")),
-        HeroData(heroName: "ヴォルジン", heroImage: UIImage(named: "hero79"))
+        HeroData(heroName: "ヴォルジン", heroImage: UIImage(named: "hero79")),
+        HeroData(heroName: "スキャブス・カッターバター", heroImage: UIImage(named: "hero80")),
+        HeroData(heroName: "レディ・ヴァッシュ", heroImage: UIImage(named: "hero81"))
     ]
 
     // HeroDataからImageを取り出しList化する

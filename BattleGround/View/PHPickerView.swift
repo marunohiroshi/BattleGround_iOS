@@ -29,15 +29,14 @@ struct PHPickerView: UIViewControllerRepresentable {
             if let result = results.first {
                 // 写真の取得は非同期で実施
                 // 取得ができたらクロージャーが動く
-                result.itemProvider.loadObject(ofClass: UIImage.self) {
-                    image, _ in
+                result.itemProvider.loadObject(ofClass: UIImage.self) {image, _ in
                     // 写真が選択できたら
                     if let unwrapImage = image as? UIImage {
                         // 選択された写真を追加する
                         self.parent.screenShot = unwrapImage
-                        if let unwrapImage = self.parent.screenShot {
-                            //                            self.parent.screenShot = Image(uiImage: unwrapImage)
-                        }
+                        //                        if let unwrapImage = self.parent.screenShot {
+                        //                            //                            self.parent.screenShot = Image(uiImage: unwrapImage)
+                        //                        }
                     } else {
                         print("使用できる写真がありません")
                     }
@@ -51,13 +50,13 @@ struct PHPickerView: UIViewControllerRepresentable {
     }
 
     // Coorinatorを生成、SwiftUIによって自動的に呼び出し
-    func makeCoordinator() -> Coordinator {
+    internal func makeCoordinator() -> Coordinator {
         // Coordinatorクラスのインスタンスを生成
         Coordinator(parent: self)
     }
 
     // Viewを生成する時に実行
-    func makeUIViewController(context: UIViewControllerRepresentableContext<PHPickerView>) -> PHPickerViewController {
+    internal func makeUIViewController(context: UIViewControllerRepresentableContext<PHPickerView>) -> PHPickerViewController {
         // PHPickerViewControllerのカスタマイズ
         var configuration = PHPickerConfiguration()
         // 静止画を選択
@@ -73,7 +72,7 @@ struct PHPickerView: UIViewControllerRepresentable {
     }
 
     // Viewが更新されたときに実行
-    func updateUIViewController(_ uiViewController: PHPickerViewController, context: UIViewControllerRepresentableContext<PHPickerView>) {
+    internal func updateUIViewController(_ uiViewController: PHPickerViewController, context: UIViewControllerRepresentableContext<PHPickerView>) {
         // 処理なし
     }
 }

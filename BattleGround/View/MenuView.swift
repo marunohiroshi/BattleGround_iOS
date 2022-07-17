@@ -41,23 +41,49 @@ struct MenuView: View {
                         Divider()
                         ScrollView(.vertical, showsIndicators: true) {
                             HStack {
-                                Image(systemName: "person")
-                                Text("Profile")
+                                Button(action: {
+                                    if let url = URL(string: "https://playhearthstone.com/ja-jp/battlegrounds") {
+                                        UIApplication.shared.open(url)
+                                    }
+                                }, label: {
+                                    HStack {
+                                        Image(systemName: "safari")
+                                        Text("公式サイト")
+                                    }
+                                    .padding()
+                                })
+                                Spacer()
                             }
-                            .padding()
                             HStack {
-                                Image(systemName: "list.dash")
-                                Text("Lists")
+                                Button(action: {
+                                    if let url = URL(string: "https://playhearthstone.com/ja-jp/community/leaderboards?region=AP&leaderboardId=BG") {
+                                        UIApplication.shared.open(url)
+                                    }
+                                }, label: {
+                                    HStack {
+                                        Image(systemName: "safari")
+                                        Text("公式ランキング")
+                                    }
+                                    .padding()
+                                })
+                                Spacer()
                             }
-                            .padding()
                             HStack {
-                                Image(systemName: "text.bubble")
-                                Text("Topics")
+                                Button(action: {
+                                    if let url = URL(string: "https://twitter.com/3f6N4gMYgNkfiq6") {
+                                        UIApplication.shared.open(url)
+                                    }
+                                }, label: {
+                                    HStack {
+                                        Image(systemName: "paperplane")
+                                        Text("お問い合わせ")
+                                    }
+                                    .padding()
+                                })
+                                Spacer()
                             }
-                            .padding()
                         }
                         Divider()
-                        Text("Settings and privacy")
                     }
                     .padding(.horizontal, 20)
                     .frame(width: geometry.size.width * 0.7)

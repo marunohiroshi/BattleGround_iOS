@@ -10,11 +10,21 @@ import SwiftUI
 struct HomeView: View {
     @State private var isShowMenuView = false
     @State private var isShowActionSheet = false
+    @State private var selection = 0
+    private var handler: Binding<Int> { Binding(
+        get: { self.selection },
+        set: {
+            if $0 == self.selection {
+                // TODO: タブ押下でバトルログリストに戻るようにする
+            }
+            self.selection = $0
+        }
+    )}
 
     var body: some View {
         NavigationView {
             GeometryReader { _ in
-                TabView {
+                TabView(selection: handler) {
                     ZStack(alignment: .leading) {
                         // メインコンテンツ
                         VStack {
@@ -65,19 +75,23 @@ struct HomeView: View {
                                 .transition(.slide)
                         }
                     }
+
                     .tabItem {
                         Image(systemName: "note.text.badge.plus")
                         Text("ログ")
                     }
+                    .tag(0)
 
                     ChartView()
                         .tabItem {
                             Image(systemName: "books.vertical")
                             Text("戦績")
                         }
+                        .tag(0)
                 }
             }
-        }.navigationBarBackButtonHidden(true)
+        }
+        .navigationBarBackButtonHidden(true)
         .navigationBarTitle("")
     }
 
