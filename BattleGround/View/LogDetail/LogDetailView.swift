@@ -21,7 +21,6 @@ struct LogDetailView: View {
     init(logData: Binding<LogDataItem>, isShowingFloatButton: Binding<Bool>) {
         _logData = logData
         self._isShowingFloatButton = isShowingFloatButton
-        //        _selectedHero = State(initialValue: HeroData(heroName: logData.heroName, heroImage: Utility.convertBase64ToImage(base64String: logData.heroImage) ?? UIImage(systemName: "camera")!))
     }
 
     var body: some View {
@@ -105,7 +104,6 @@ struct LogDetailView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
                         isEditMode = true
-                        //                        initData()
                     }) {
                         Text("編集")
                     }

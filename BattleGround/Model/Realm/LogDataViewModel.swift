@@ -10,7 +10,11 @@ import RealmSwift
 import SwiftUI
 
 class LogDataViewModel: ObservableObject {
-    @Published var model = LogDataModel()
+    @Published var model: LogDataModel
+
+    init(sortType: SortType = .date) {
+        model = LogDataModel(sortType: sortType)
+    }
 
     var logDataItems: Results<LogDataItem> {
         model.items

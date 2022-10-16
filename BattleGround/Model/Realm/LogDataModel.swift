@@ -11,9 +11,11 @@ import RealmSwift
 // Realm用のClass
 class LogDataModel: ObservableObject {
     var config: Realm.Configuration
+    var sortType: SortType
 
-    init() {
+    init(sortType: SortType) {
         config = Realm.Configuration()
+        self.sortType = sortType
     }
 
     var realm: Realm {
@@ -21,8 +23,17 @@ class LogDataModel: ObservableObject {
     }
 
     var items: Results<LogDataItem> {
-        realm.objects(LogDataItem.self)
-        //            .sorted(byKeyPath: "battleDate")
+        switch sortType {
+        case .date:
+            return realm.objects(LogDataItem.self).sorted(byKeyPath: "battleDate")
+
+        case .rank:
+            return realm.objects(LogDataItem.self).sorted(byKeyPath: "rank")
+
+        case .favorite: break
+        // no-action
+        }
+        return realm.objects(LogDataItem.self)
     }
 
     func add(heroImage: String, heroName: String, rank: Int, currentRate: Int,
@@ -84,6 +95,7 @@ class LogDataModel: ObservableObject {
                 logDataItem.screenShot = newItem.screenShot
                 logDataItem.battleDate = newItem.battleDate
                 logDataItem.memo = newItem.memo
+                realm.add(logDataItem, update: .modified)
             }
         } catch {
             print(error.localizedDescription)
@@ -103,4 +115,10 @@ class LogDataItem: Object, Identifiable {
     @Persisted var screenShot: String
     @Persisted var battleDate: Date
     @Persisted var memo: String
+}
+
+enum SortType {
+    case date
+    case rank
+    case favorite
 }

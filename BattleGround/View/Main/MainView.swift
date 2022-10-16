@@ -10,7 +10,7 @@ import SwiftUI
 
 struct MainView: View {
     @Environment(\.scenePhase) private var scenePhase
-    @EnvironmentObject var logDataViewModel: LogDataViewModel
+    @ObservedObject var logDataViewModel: LogDataViewModel
 
     @State var logDataList: [LogDataItem] = []
     @State var isShowingFloatButton = true
@@ -41,10 +41,13 @@ struct MainView: View {
                                                 pointChange: $item.pointChange)
                                         }
                                     }
-                                    //                                    .background(item.rank < 5 ? Color.blue : Color.red)
                                 }
                                 .onDelete { indexSet in
-                                    removeRow(indexSet: indexSet)
+                                    if logDataViewModel.model.sortType == .date {
+                                        removeDateRow(indexSet: indexSet)
+                                    } else {
+                                        removeRankRow(indexSet: indexSet)
+                                    }
                                 }
                             }
                             .navigationBarTitle("バトルログ")
@@ -66,14 +69,16 @@ struct MainView: View {
                 }
             }
         }
+        .onReceive(logDataViewModel.$model) {_ in
+            reloadData()
+        }
         .onAppear {
             print(Realm.Configuration.defaultConfiguration.fileURL!)
-            logDataList = Array(logDataViewModel.logDataItems).reversed()
-            ChartData.setLogDataList(logDataList: Array(logDataViewModel.logDataItems))
+            reloadData()
         }
     }
 
-    func removeRow(indexSet: IndexSet) {
+    func removeDateRow(indexSet: IndexSet) {
         logDataList.remove(atOffsets: indexSet)
         guard let index = indexSet.first else {
             return
@@ -83,11 +88,35 @@ struct MainView: View {
         let deleteId = logDataViewModel.logDataItems[count].id
         // 行を削除する
         logDataViewModel.delete(id: deleteId)
+        reloadData()
+    }
+
+    func removeRankRow(indexSet: IndexSet) {
+        logDataList.remove(atOffsets: indexSet)
+        guard let index = indexSet.first else {
+            return
+        }
+        // 削除する行のIDを取得
+        let deleteId = logDataViewModel.logDataItems[index].id
+        // 行を削除する
+        logDataViewModel.delete(id: deleteId)
     }
 
     func replaceRow(_ from: IndexSet, _ to: Int) {
         //        LogData.logDataList.move(fromOffsets: from, toOffset: to)
         //        logDataList.move(fromOffsets: from, toOffset: to)
+    }
+
+    func reloadData() {
+        if logDataViewModel.model.sortType == .date {
+            logDataList = Array(logDataViewModel.logDataItems).reversed()
+        } else {
+            logDataList = Array(logDataViewModel.logDataItems)
+        }
+        logDataList.forEach {item in
+            logDataViewModel.update(id: item.id, newItem: item)
+        }
+        ChartData.setLogDataList(logDataList: Array(logDataViewModel.logDataItems))
     }
 }
 

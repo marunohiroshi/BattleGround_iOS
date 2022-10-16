@@ -10,7 +10,7 @@ import SwiftUI
 struct AddLogView: View {
     @Environment(\.scenePhase) private var scenePhase
     @Environment(\.presentationMode) var presentation
-    @EnvironmentObject var viewModel: LogDataViewModel
+    var viewModel = LogDataViewModel()
 
     @State var heroName = "test"
     @State var isShowHeroSelectView = false
